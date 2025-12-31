@@ -1,9 +1,9 @@
-# PHP JSON-RPC client and server library
+# 🔍 PHP JSON-RPC client and server library
 
 This library contains a PHP implementation of JSON-RPC version 2. This libraray
 implements both a client and a server.
 
-## Installation
+## 📦 Installation
 
 Download the contents of the `lib` folder to your project. Then simply include
 the appropriate library:
@@ -13,7 +13,7 @@ include "lib/Server.php";
 include "lib/Client.php";
 ```
 
-### Server example
+### 🖋️ Server example
 
 ```php
 $server = new Lightbulb\Json\Rpc2\Server;
@@ -33,13 +33,13 @@ $server->handle();
 
 More information in [advanced options](advanced-options.md) docs.
 
-#### Warning: Creation of dynamic property XYZ is deprecated
+#### ⛔ Warning: Creation of dynamic property XYZ is deprecated
 
 Newer PHPs warn about creating dynamic properties on classes. If you add class
 methods to your server you will need to add `#[\AllowDynamicProperties]`
 before the class definition to work around this error.
 
-### Client example
+### 🖊️ Client example
 
 ```php
 $url    = 'http://api.domain.com/endpoint';
@@ -49,12 +49,12 @@ $str = $client->upper("kitten");
 $id  = $client->getID("Jason Doolis");
 ```
 
-#### Client supports class chaining to call nested methods
+#### 🔗 Client supports class chaining to call nested methods
 
 ```php
 $ok = $client->user->mail->login($user, $pass); // Maps to 'user.mail.login'
 ```
 
-## License
+## 🏛️ License
 Licensed under the New BSD License. Copyright 2011 Pavel Ptacek.
 All rights reserved.
